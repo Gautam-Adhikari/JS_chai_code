@@ -22,7 +22,8 @@ let state;
 // string => ""
 // boolean => true/false
 // null => standalone value
-// undefined => 
+// undefined =>       //not associate any value eg. weather app not working (dont return null i.e 0 ,rather 
+                      // value is unknown)
 // symbol => unique
 
 
