@@ -42,3 +42,24 @@ const myFunction = function(){
 console.log(typeof anotherId); //typeof bigINt is undefined and of null is object
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++
+// Stack(primitive) , Heap(non primitive)
+
+let name = "gautam"
+let anothername = name //copy (primitive) not given original value
+console.log(name)
+console.log(anothername)
+anothername = "adhikari"
+console.log(name) // value in name is not changed
+console.log(anothername)
+
+
+let userOne = {
+    email: "user@google.com", 
+    upi: "user@ybl"
+}
+let userTwo = userOne
+userTwo.email = "gautam@google.com"  // reference hence changes for all the variables (heap ds)
+console.log(userOne.email); 
+console.log(userTwo.email);
