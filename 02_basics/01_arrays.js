@@ -2,6 +2,7 @@ const myArr = [0,1,2,3,true,"Gautam"];
 const myArr2 = new Array(1,2,3,4,5)
 console.log(myArr[1])
 
+//array create shallow copies on copy operations(i.e same reference points)
 //methods
 myArr.push(7)
 console.log(myArr)

@@ -21,9 +21,9 @@ console.log(real_another_array);
 
 
 console.log(Array.isArray("Gautam"))
-console.log(Array.from("Gautam"))
-console.log(Array.from({name: "Gautam"})) // interesting
-
+console.log(Array.from("Gautam")) //convert to array
+console.log(Array.from({name: "Gautam"})) // interesting //cannot convert to array as need to specify key or value is used for array hence empty array
+ 
 let score1 = 100
 let score2 = 200
 let score3 = 300
