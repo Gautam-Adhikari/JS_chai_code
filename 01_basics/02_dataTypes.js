@@ -1,7 +1,7 @@
 "use strict"; // treat all JS code as newer version (With strict mode, you can not, for example, use undeclared variables.)
 // x = 3.14; //error
 //console.log(x);
-//alert(3+3) //cannot use in nodejs (can use in browser)
+//alert(3+3) //cannot use alert in nodejs (can use in browser) 
 //original documentation tc39.es
 
 
@@ -21,10 +21,9 @@ let state;
 // bigint
 // string => ""
 // boolean => true/false
-// null => standalone value
-// undefined =>       //not associate any value eg. weather app not working (dont return null i.e 0 ,rather 
-                      // value is unknown)
-// symbol => unique
+// null => standalone value  //khaali hain (empty) weather app return temp null
+// undefined =>       //not associate any value 
+// symbol => unique (figma tools use it)
 
 
 // object
