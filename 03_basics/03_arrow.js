@@ -3,33 +3,35 @@ const user = {
     price: 999,
 
     welcomeMessage: function() {
-        console.log(`${this.username} , welcome to website`);
+        console.log(`${this.username} , welcome to website`);       //current context(values)
         console.log(this);
     }
 
 }
 
+//no this in arrow function allowed
+
 // user.welcomeMessage()
 // user.username = "sam"
-// user.welcomeMessage()
+// user.welcomeMessage()    //sam, welcome to website       //use of this
 
-// console.log(this);
+// console.log(this);       //{} => in node  // in console => window object
 
 // function chai(){
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username);          //undefined //not in function only object
 // }
 
 // chai()
 
 // const chai = function () {
 //     let username = "hitesh"
-//     console.log(this.username);
+//     console.log(this.username);          //undefined
 // }
 
 const chai =  () => {
     let username = "hitesh"
-    console.log(this);
+    console.log(this);                  //{}
 }
 
 
@@ -39,11 +41,11 @@ const chai =  () => {
 //     return num1 + num2
 // }
 
-// const addTwo = (num1, num2) =>  num1 + num2
+// const addTwo = (num1, num2) =>  num1 + num2          //implicit return (mein maan leta hu mat likho return)
 
-// const addTwo = (num1, num2) => ( num1 + num2 )
+// const addTwo = (num1, num2) => ( num1 + num2 )       // {} return likho Aur () return mat likho
 
-const addTwo = (num1, num2) => ({username: "hitesh"})
+const addTwo = (num1, num2) => ({username: "hitesh"})           
 
 
 console.log(addTwo(3, 4))

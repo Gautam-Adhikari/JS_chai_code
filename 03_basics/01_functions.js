@@ -14,20 +14,20 @@ function sayMyName(){
 //     console.log(number1 + number2);
 // }
 
-function addTwoNumbers(number1, number2){
+function addTwoNumbers(number1, number2){  // parameters 
 
     // let result = number1 + number2
     // return result
     return number1 + number2
 }
 
-const result = addTwoNumbers(3, 5)
+const result = addTwoNumbers(3, 5)   // arguments
 
 // console.log("Result: ", result);
 
 
 function loginUserMessage(username = "sam"){
-    if(!username){                                              //undefined is false
+    if(!username){        // username === undefined (undefined is false)                                       //undefined is false
         console.log("PLease enter a username");
         return
     }
@@ -37,7 +37,7 @@ function loginUserMessage(username = "sam"){
 // console.log(loginUserMessage("hitesh"))
 // console.log(loginUserMessage("hitesh"))
 
-function calculateCartPrice(val1, val2, ...num1){      // ... rest operator (also spread op)
+function calculateCartPrice(val1, val2, ...num1){      // ... rest operator (also spread op) returns all in array except first two
     return num1
 }
 

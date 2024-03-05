@@ -68,7 +68,7 @@ const course = {
 
 const {courseInstructor: instructor} = course//(from where)
 
-// console.log(courseInstructor);
+// console.log(courseInstructor); // instead of course.courseInstructor
 console.log(instructor);    //object destructure
 
 //example of destructuring in react

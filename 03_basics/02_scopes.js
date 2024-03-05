@@ -7,12 +7,14 @@ if (true) {
     
 }
 
-
+//global scope is different for node and inspect console (core scope, block scope,nest scope) 
 
 // console.log(a);
 // console.log(b);
 // console.log(c);
 
+
+//closures
 
 function one(){
     const username = "hitesh"
@@ -44,7 +46,7 @@ if (true) {
 // ++++++++++++++++++ interesting ++++++++++++++++++
 
 
-console.log(addone(5))
+console.log(addone(5))  // no error (//6)
 
 function addone(num){
     return num + 1
@@ -52,7 +54,7 @@ function addone(num){
 
 
 
-addTwo(5)
-const addTwo = function(num){
+addTwo(5)                   // error (cannot access)    variable is holding value , decalaration
+const addTwo = function(num){               // expressions (variable hold functions)
     return num + 2
-}
+}                           //hoisting
