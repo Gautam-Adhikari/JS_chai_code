@@ -4,9 +4,10 @@ let score = "33abc" //definite that the data type is integer
 
 console.log(typeof score);
 console.log(typeof(score));
-let valueInNumber  = Number(score)
-console.log(typeof valueInNumber);
-console.log(valueInNumber)  //not a number
+let valueInNumber  = Number(score)    //use capital (class based)
+console.log(typeof valueInNumber); 
+console.log(valueInNumber)  //not a number value is NaN if string to number
+
 
 let val = null
 
@@ -69,9 +70,9 @@ let str3 = str1 + str2
 
 // console.log( (3 + 4) * 5 % 3);
 
-// console.log(+true); //1
+// console.log(+true); //1   //conversion
 //console.log(true+); //error
-// console.log(+""); //0
+// console.log(+""); //0     //conversion
 
 let num1, num2, num3
 

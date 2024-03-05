@@ -1,6 +1,8 @@
 //primitive - call by value - copy is given and changes are made in copy
 // 7 types : String, Number , Boolean, null, undefined, Symbol, BigInt
 
+//kis tarah se data ko mem mein rakha jaata hain
+
 //reference type - non primitive - reference is given
 // arrays, objects, functions
 
@@ -9,7 +11,7 @@
 //  Primitive
 
 
-const score = 100
+const score = 100           //const score:number = 100 (in typescript)
 const scoreValue = 100.3
 
 const isLoggedIn = false
@@ -38,12 +40,13 @@ let myObj = {
 const myFunction = function(){
     console.log("Hello world");
 }
-
+//function object
 console.log(typeof anotherId); //typeof bigINt is undefined and of null is object
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++
+//automatic garbage collection 
 // Stack(primitive) , Heap(non primitive)
 
 let name = "gautam"

@@ -1,5 +1,6 @@
 // Dates
-
+//Note: TC39 is working on Temporal, a new Date/Time API.
+//Read more about it on the Igalia blog. It is not yet ready for production use!(like math)
 let myDate = new Date()
 // console.log(myDate)
 // console.log(myDate.toString());
