@@ -1,4 +1,4 @@
-// const tinderUser = new Object()
+// const tinderUser = new Object()          //singleton object
 const tinderUser = {}
 
 tinderUser.id = "123abc"
@@ -18,18 +18,19 @@ const regularUser = {
 }
 
 // console.log(regularUser.fullname?.userfullname.firstname); //use ? for optional chaining
+// protection if fullname is not present from api
 
 const obj1 = {1: "a", 2: "b"}
 const obj2 = {3: "a", 4: "b"}
 const obj4 = {5: "a", 6: "b"}
 
-// const obj3 = { obj1, obj2 }
+// const obj3 = { obj1, obj2 }  //obeject within object
 // const obj3 = Object.assign({}, obj1, obj2, obj4) {} is a target object
 
 const obj3 = {...obj1, ...obj2}
 // console.log(obj3);
 
-
+//objects within array
 const users = [
     {
         id: 1,
@@ -50,9 +51,9 @@ users[1].email
 
 // console.log(Object.keys(tinderUser));
 // console.log(Object.values(tinderUser));
-// console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser));     //key value pair into array
 
-// console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));        //prevent from crashing
 
 //*************************************** */
 
@@ -65,7 +66,7 @@ const course = {
 
 // course.courseInstructor
 
-const {courseInstructor: instructor} = course
+const {courseInstructor: instructor} = course//(from where)
 
 // console.log(courseInstructor);
 console.log(instructor);    //object destructure
@@ -78,12 +79,12 @@ console.log(instructor);    //object destructure
 
 // {
 //     "name": "hitesh",
-//     "coursename": "js in hindi",                 //JSON format
+//     "coursename": "js in hindi",                 //JSON format(No name diff from object)
 //     "price": "free"
 // }
 
 [
-    {},                                             //object in arrays / jsonformatter / random user me api
-    {},
+    {},                                             //object in arrays / jsonformatter / random user me api // tree
+    {},                 //api inform of arrays
     {}
 ]

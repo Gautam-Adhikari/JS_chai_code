@@ -1,14 +1,14 @@
-//can be declared using literals and also constructors
+//can be declared using literals and also constructors(Object.create)
 //singleton (these are not formed if objects are formed using literals) else multiple instances
-//object.create
 
-//object literals
+
 
 
 const mySym = Symbol("key1")
 
+//object literals
 const jsUser = {
-    name: "Gautam",
+    name: "Gautam",                     //process it as "name"
     "full name": "Gautam Adhikari",
     [mySym]: "mykey1",   //in order to access symbols use square brackets
     age: 18,
@@ -18,14 +18,14 @@ const jsUser = {
     lastLoginDays: ["Monday", "Saturday"]
 } //object created
 //console.log(jsUser."full name") //error
-console.log(jsUser["full name"]) // cannot use dot operator
+console.log(jsUser["full name"]) // cannot use dot operator to access full name
 console.log(jsUser.email)
 console.log(jsUser["email"])
 
 console.log(jsUser[mySym]) // use square bracket //cannot use dot operator 
 
 jsUser.email = "hitesh@chatgpt.com"
-// Object.freeze(JsUser)
+// Object.freeze(JsUser)    
 jsUser.email = "hitesh@microsoft.com"
 // console.log(JsUser);
 
@@ -39,3 +39,6 @@ jsUser.greetingTwo = function(){
 
 console.log(jsUser.greeting()); //use paranthesis if not used then refence to function is returned
 console.log(jsUser.greetingTwo());
+
+
+//undefined by default by browser????????????/
