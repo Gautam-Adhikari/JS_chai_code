@@ -1,0 +1,32 @@
+JAVASCRIPT EXECUTION CONTEXT
+-> IN TWO PHASE:
+        1. GLOBAL EXECUTION CONTEXT => {} -> THIS KEYWORD I.E WINDOW FOR BROWSER , JS IS SINGLE THREADED
+        2. FUNCTIONAL EXECUTION CONTEXT
+        3. (EXTRA MONGOOSE) EVAL EXECUTION CONTEXT (SIMILAR TO GLOBAL)
+
+{} JS => 1. MEM CREATION PHASE (MEM ALLOCATION)
+         2. EXECUTION PHASE (SUM,SUB,MUL ETC.)
+
+e.g. let val1 = 10
+     let val2 = 5
+     function addNum (num1,num2){
+        let total = num1+num2
+        return total
+     }
+     let result1 = addNum(val1, val2)
+     let result2 = addNum (10，2)
+    
+1. GLOBAL ec -> THIS            // mem free after execution 
+2. MEM PHASE (1st cycle)                    EXECUTION PHASE(2nd cycle)
+        val1 = > undefined                  val1 = 10
+        val2 = > undefined                  val2 = 5
+        addNum = > definition               addNum -> another ec{new variable environment+execution thred}
+        result1 = > undefined               result1 = 15 , result2 = 12
+        result2 = > undefined
+                                            MEM PHASE(addNum)                   EXECUTION PHASE(addNUm)
+                                            val1 = > undefined                  num1 = 10
+                                            val2 = > undefined                  num2 = 5
+                                            total = > undefined                 total = 15 (return to GLOBAL ec)
+
+LIFO method for function execution 
+call stack in snippet console after breakpoint
